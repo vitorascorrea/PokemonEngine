@@ -23,3 +23,13 @@ Engine de batalha Pokémon utilizando regras da Gen7/Smogon.
 - [ ] Field Hazards (Stealth Rock, Spikes, etc.)
 - [ ] Field Conditions (Hail, Sandstorm, Psychic Terrain, etc.)
 - [ ] Efeitos especiais de movimentos (U-turn, Volt Switch, Pursuit, etc.)
+- [ ] Z-moves
+- [ ] Mega Evolution
+
+**API para jogar no Pokémon Showdown!**
+
+Em uma versão antiga dessa Engine (que era em Ruby), foi feito uma API que se comunicava com o bot [https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot](https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot). 
+
+Esse bot tem alguns arquivos de configuração de AI que permitiam que o bot batalhasse contra outros jogadores seguindo regras especificadas pelo desenvolvedor, só que elas precisavam ser síncronas e programadas em Node. Como eu queria fazer em uma linguagem diferente, precisei modificar um pouco o código fonte para que o bot aceitasse comunicação assíncrona. Essa modificação ficou um pouco... grosseira e não merecedora da qualidade que é o bot.
+
+Nessa nova versão em Java, pretendo utilizar o microframework [Spark](http://sparkjava.com/) (que já está na lib) para criar essa API, mas após conseguir simular perfeitamente a batalha Pokémon.
