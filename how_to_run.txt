@@ -1,4 +1,0 @@
-javac -classpath .:lib/json-simple-master.jar:lib/postgresql-42.1.4.jar:lib/spark-core-2.7.0.jar engine/**/*.java engine/*.java -d bin
-
-java -classpath .:lib/json-simple-master.jar:lib/postgresql-42.1.4.jar:lib/spark-core-2.7.0.jar:bin engine/Main
-
