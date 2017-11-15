@@ -10,7 +10,7 @@ import java.util.Random;
 public class Main {
   public static void main(String[] args){
     DecisionMaker p1_decision_maker = new GreedySimple();
-    DecisionMaker p2_decision_maker = new Random();
+    DecisionMaker p2_decision_maker = new RandomDecision();
     runGame(p1_decision_maker, p2_decision_maker, false);
   }
 
@@ -31,14 +31,24 @@ public class Main {
 
         if (state.getActivePokemon(1).hp <= 0 && !state.terminalState()) {
           int rand1 = new Random().nextInt(state.avaliableActions(1).size());
-          if(!simulating) System.out.println("P1: " + state.avaliableActions(1).get(rand1).name);
+          if(!simulating) {
+            System.out.println();
+            System.out.println("P1: " + state.getActivePokemon(1).name + " fainted!");
+            System.out.println("P1: " + state.avaliableActions(1).get(rand1).name);
+            System.out.println();
+          }
           state.switchActivePokemon(1, state.avaliableActions(1).get(rand1));
 
         }
 
         if (state.getActivePokemon(2).hp <= 0 && !state.terminalState()) {
           int rand2 = new Random().nextInt(state.avaliableActions(2).size());
-          if(!simulating) System.out.println("P2: " + state.avaliableActions(2).get(rand2).name);
+          if(!simulating) {
+            System.out.println();
+            System.out.println("P2: " + state.getActivePokemon(2).name + " fainted!");
+            System.out.println("P2: " + state.avaliableActions(2).get(rand2).name);
+            System.out.println();
+          }
           state.switchActivePokemon(2, state.avaliableActions(2).get(rand2));
         }
 

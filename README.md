@@ -33,6 +33,8 @@ Para implementar um novo **decision maker**, é preciso apenas implementar a int
 
 - [ ] Documentar o código!
 - [ ] Implementar um decision maker humano (com input do usuário)
+- [ ] Implementar um **switch** decision maker (atualmente ele escolhe um switch aleatório quando o Pokémon ativo morre)
+- [ ] Resolver o bug de geração aleatória de times: às vezes o formato de um Pokémon no arquivo factory-sets.json está fora do padrão, o que gera um erro na execução. Basta executar novamente até que ele consiga gerar um time. O ideal seria refazê-lo com os sets atuais do Smogon.
 - [ ] Itens e seus efeitos (Choice Band, Leftovers, etc.)
 - [ ] Traits e seus efeitos (Levitate, Flash Fire, etc.)
 - [ ] Field Hazards (Stealth Rock, Spikes, etc.)
@@ -43,7 +45,7 @@ Para implementar um novo **decision maker**, é preciso apenas implementar a int
 
 ##API para jogar no Pokémon Showdown!
 
-Em uma versão antiga dessa Engine (que era em Ruby), foi feito uma API que se comunicava com o bot [https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot](https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot). 
+Em uma versão antiga dessa Engine (que era em Ruby), foi feito uma API que se comunicava com o bot [https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot](https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot).
 
 Esse bot tem alguns arquivos de configuração de AI que permitiam que o bot batalhasse contra outros jogadores seguindo regras especificadas pelo desenvolvedor, só que elas precisavam ser síncronas e programadas em Node. Como eu queria fazer em uma linguagem diferente, precisei modificar um pouco o código fonte para que o bot aceitasse comunicação assíncrona. Essa modificação ficou um pouco... grosseira e não merecedora da qualidade que é o bot.
 
