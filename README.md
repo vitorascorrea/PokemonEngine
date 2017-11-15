@@ -2,7 +2,7 @@
 
 Engine de batalha Pokémon utilizando regras da Gen7/Smogon com o objetivo de criar uma Inteligência Artificial que consiga ganhar em alto nível competitivo na plataforma [Pokémon Showdown!](http://play.pokemonshowdown.com/).
 
-##Instruções de Instalação (Ubuntu)
+## Instruções de Instalação (Ubuntu)
 
 1. Tenha Java 8 instalado.
 
@@ -16,7 +16,7 @@ Engine de batalha Pokémon utilizando regras da Gen7/Smogon com o objetivo de cr
 
 5. Para executar: `java -classpath .:lib/json-simple-master.jar:lib/postgresql-42.1.4.jar:lib/spark-core-2.7.0.jar:bin engine/Main`
 
-##Como funciona
+## Como funciona
 
 Temos duas partes nesse projeto: a **engine**, que simula as mecânicas de batalhas do Pokémon, e o **decision maker**, que escolhe quais ações executar na batalha (simulando um jogador real).
 
@@ -29,7 +29,7 @@ Existem implementados alguns **decision makers**, mas os mais relevantes são:
 
 Para implementar um novo **decision maker**, é preciso apenas implementar a interface **DecisionMaker** (`engine/decision/`) que recebe dois parâmetros: um objeto do tipo **State** e um inteiro *1* ou *2* que representa o time do usuário daquele decision maker (importante pois a engine trabalha com esse conceito de ordem entre os times). Exemplos em `engine/Main.java`
 
-##TODO
+## TODO
 
 - [ ] Documentar o código!
 - [ ] Implementar um decision maker humano (com input do usuário)
@@ -43,7 +43,7 @@ Para implementar um novo **decision maker**, é preciso apenas implementar a int
 - [ ] Z-moves
 - [ ] Mega Evolution
 
-##API para jogar no Pokémon Showdown!
+## API para jogar no Pokémon Showdown!
 
 Em uma versão antiga dessa Engine (que era em Ruby), foi feito uma API que se comunicava com o bot [https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot](https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot).
 
